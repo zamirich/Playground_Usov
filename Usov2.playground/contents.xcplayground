@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='rendered'>
+    <pages>
+        <page name='0 - Callouts'/>
+        <page name='1 - Typealias, switch, tuple'/>
+        <page name='2 - Arrays'/>
+        <page name='3 - Sets'/>
+        <page name='4 - Dictionaries'/>
+        <page name='5 - Loops'/>
+    </pages>
+</playground>

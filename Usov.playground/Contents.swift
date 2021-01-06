@@ -1,5 +1,10 @@
 import Foundation
 
+/*:
+ - callout(Title): Text
+
+ */
+
 //: ---
 //: *Page 63 of 449*
 //:---
@@ -55,7 +60,7 @@ if isDragon {
     print("Troll")
 }
 
-//: Page 85
+//: **Page #85**
 let a = false
 let b = false
 let c = true
@@ -64,10 +69,10 @@ let e = false
 
 let a1 = a || (b || c) && (d && e)
 
-//: Page 97
+//: **Page #97**
 let abc = "omega" < "gamma"
 
-//: Page 98
+//: **Page #98**
 var myTuple = (favMovie: "Зеленая миля", favNumber: 7, favFood: "Хичины")
 myTuple.2
 let (a3, b3, c3) = myTuple
@@ -78,15 +83,18 @@ ksuTuple = myTuple
 myTuple = bufferTuple
 let newTuple = (myTuple.1, ksuTuple.1, myTuple.1-ksuTuple.1)
 
-//:Page 101
+//: **Page #101**
 var optionalVar = Optional ("Hello")
 print(optionalVar)
 
-//: Page 103
+//: **Page #103**
 var type: String
 let monster: String! = "Lololo"
 type = monster
 print(monster)
 print(type)
 
-
+//: **Page #111** Тернарный оператор условия
+let a10 = 1
+let a20 = 2
+a10 > a20 ? true : false
