@@ -7,5 +7,6 @@
         <page name='3 - Sets'/>
         <page name='4 - Dictionaries'/>
         <page name='5 - Loops'/>
+        <page name='6 - Functions'/>
     </pages>
 </playground>
