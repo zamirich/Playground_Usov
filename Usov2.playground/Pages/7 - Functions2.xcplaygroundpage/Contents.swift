@@ -48,4 +48,5 @@ func sumWalletFurtherImproved(billsFunction wallet: (Int) -> ([Int])) -> Int? {
 sumWalletFurtherImproved(billsFunction: generateWallet) //this funciton executes well, but then all of a sudden brings an error. to get rid of it, just need to type this row again
 
 //last page is 183
+//new line
 //: [Previous](@previous)  |  [Next Page](@next)
