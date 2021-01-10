@@ -1,5 +1,4 @@
 //: [Previous](@previous)  | Page 6 - Functions | [Next Page](@next)
-import Foundation
 /*:
  ---
  - Callout(Page 169): Functions

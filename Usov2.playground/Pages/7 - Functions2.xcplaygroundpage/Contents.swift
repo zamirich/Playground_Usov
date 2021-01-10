@@ -46,7 +46,54 @@ func sumWalletFurtherImproved(billsFunction wallet: (Int) -> ([Int])) -> Int? {
 }
 //passing function as a parameter for other function
 sumWalletFurtherImproved(billsFunction: generateWallet) //this funciton executes well, but then all of a sudden brings an error. to get rid of it, just need to type this row again
+//: ### Page 183 - Complex functional type (a bit awkward concept, can't say that I understood in full
+/*:
+ - Note: Not only can we use function as an input parameters, but we can also return funciton instead of value as a result of a funciton
+ */
+func printText() -> (String) {
+    return "Very good book"
+}
+//function that returns a funciton:
+func returnPrintTextFunction() -> () -> String {
+    return printText
+}
 
-//last page is 183
-//new line
+let newFunctionInLet = returnPrintTextFunction()
+newFunctionInLet()
+//: ### Page 185 Nested functions
+//we will create a function that will determine coordinates of a dot and then it will have 4 nested function, for movements in 4 different directions. So dot's coordinates will change depending on what direction is chosen.
+func oneStep(coordinates: inout (Int, Int), stepType: String) {
+    func up(coords: inout (Int, Int)) {
+        coords = (coords.0+1, coords.1)
+    }
+    func right(coords: inout (Int, Int)) {
+        coords = (coords.0, coords.1+1)
+    }
+    func down(coords: inout (Int, Int)) {
+        coords = (coords.0-1, coords.1)
+    }
+    func left(coords: inout (Int, Int)) {
+        coords = (coords.0, coords.1-1)
+    }
+    
+    switch stepType {
+    case "up":
+        up(coords: &coordinates)
+    case "right":
+        right(coords: &coordinates)
+    case "down":
+        down(coords: &coordinates)
+    case "left":
+        left(coords: &coordinates)
+    default:
+        break
+    }
+}
+var coordinates = (10, -5)
+oneStep(coordinates: &coordinates, stepType: "up")
+oneStep(coordinates: &coordinates, stepType: "right")
+coordinates
+/*:
+ - Note: Input parameter coordinates is "inout" type, so will be available after function is completed
+ */
 //: [Previous](@previous)  |  [Next Page](@next)
